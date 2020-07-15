@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: web-con
-        image: ashwani2399/webserver:v1
+        image: vimal13/apache-webserver-php
         volumeMounts:
         - name: web-pvc
           mountPath: /var/www/html
