@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deploy
+  labels:
+    app: jenkins
+spec:
+  selector:
+    matchLabels:
+      app: jenkins
+  replicas: 1
+  template:
+    metadata:
+      name: jenkins-pod
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - name: jenkins-con
+        image: jenkins:latest
+        volumeMounts:
+        - name: jenkins-pvc
+          mountPath: /var/jenkins_home/
+      volumes:
+      - name: jenkins-pvc
+        persistentVolumeClaim:
+          claimName: jenkins-persistent-volume
