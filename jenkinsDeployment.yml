@@ -18,10 +18,4 @@ spec:
       containers:
       - name: jenkins-con
         image: jenkins:latest
-        volumeMounts:
-        - name: jenkins-pvc
-          mountPath: /var/jenkins_home/
-      volumes:
-      - name: jenkins-pvc
-        persistentVolumeClaim:
-          claimName: jenkins-persistent-volume
+       
