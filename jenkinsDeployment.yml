@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
       - name: jenkins-con
-        image: jenkins:latest
+        image: ashwani2399/jenkins:v2
        
