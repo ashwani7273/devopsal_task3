@@ -1,3 +1,1 @@
-<?php
-echo ""[DHello PHP User"
-?>
+Hello PHP user
